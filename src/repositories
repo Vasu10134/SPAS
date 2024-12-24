@@ -1,0 +1,10 @@
+package com.example.spas.repositories;
+
+import org.springframework.stereotype.Repository;
+
+@Repository
+public class StudentRepository {
+    public String getStudents() {
+        return "Fetching students from database";
+    }
+}

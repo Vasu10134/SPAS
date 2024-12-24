@@ -1,0 +1,10 @@
+package com.example.spas.services;
+
+import org.springframework.stereotype.Service;
+
+@Service
+public class StudentService {
+    public String analyzePerformance() {
+        return "Performance analyzed";
+    }
+}
