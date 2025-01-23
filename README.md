@@ -16,7 +16,7 @@ Technologies Used:
 - **Backend:** Java, RESTful APIs, SQL
 - **Frontend:** JavaScript
 - **Other Tools:** Cloud Services for deployment and scalability
-
+ 
 ## 🤝 Contributing
 
 Contributions are welcome! If you would like to contribute, feel free to fork the repository, create a new branch, and submit a pull request with your ideas or improvements.
