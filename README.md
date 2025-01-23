@@ -21,6 +21,6 @@ Technologies Used:
 
 Contributions are welcome! If you would like to contribute, feel free to fork the repository, create a new branch, and submit a pull request with your ideas or improvements.
 
-## 📄 License
+## 📄 License 
 
 This project is licensed under the MIT License.
