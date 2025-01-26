@@ -3,7 +3,7 @@
 **Student Performance Analysis System** is a robust and secure application designed to analyze student performance efficiently. With role-based authentication, optimized data retrieval, and integration of data analysis tools, it provides a seamless experience for managing and analyzing student-related data.
 
 ## 🌟 Features
-
+ 
 - **Role-Based Authentication:** Ensures secure and authorized access to data by implementing user roles.
 - **Optimized Performance:** Improved data retrieval by 25% using advanced SQL query techniques and indexing.
 - **Data Analysis Integration:** Enables comprehensive performance analysis by integrating powerful data analysis tools.
