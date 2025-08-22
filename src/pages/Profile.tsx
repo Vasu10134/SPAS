@@ -4,6 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Progress } from "@/components/ui/progress";
 import { Separator } from "@/components/ui/separator";
+import { Link } from "react-router-dom";
 import { 
   User, 
   Mail, 
@@ -108,13 +109,17 @@ const Profile = () => {
                 </div>
                 <Separator />
                 <div className="flex flex-col gap-2">
-                  <Button className="gradient-primary text-white">
-                    <Edit className="h-4 w-4 mr-2" />
-                    Edit Profile
+                  <Button className="gradient-primary text-white" asChild>
+                    <Link to="/edit-profile">
+                      <Edit className="h-4 w-4 mr-2" />
+                      Edit Profile
+                    </Link>
                   </Button>
-                  <Button variant="outline">
-                    <Settings className="h-4 w-4 mr-2" />
-                    Settings
+                  <Button variant="outline" asChild>
+                    <Link to="/settings">
+                      <Settings className="h-4 w-4 mr-2" />
+                      Settings
+                    </Link>
                   </Button>
                   <Button variant="outline" className="text-destructive hover:bg-destructive/10">
                     <LogOut className="h-4 w-4 mr-2" />
