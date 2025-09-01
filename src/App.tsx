@@ -4,6 +4,8 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ThemeProvider } from "@/components/ThemeProvider";
+import { AuthProviderWrapper } from "@/contexts/AuthContext";
+import PerformanceOptimizer from "@/components/PerformanceOptimizer";
 import Layout from "./components/Layout";
 import Dashboard from "./pages/Dashboard";
 import Exams from "./pages/Exams";
@@ -28,44 +30,66 @@ import Resources from "./pages/Resources";
 import EditProfile from "./pages/EditProfile";
 import Settings from "./pages/Settings";
 
-const queryClient = new QueryClient();
+// Authentication pages
+import SignIn from "./pages/SignIn";
+import SignUp from "./pages/SignUp";
+
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      staleTime: 5 * 60 * 1000, // 5 minutes
+      gcTime: 10 * 60 * 1000, // 10 minutes (formerly cacheTime)
+      retry: 1,
+      refetchOnWindowFocus: false,
+    },
+  },
+});
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <ThemeProvider defaultTheme="light" storageKey="spas-ui-theme">
-      <TooltipProvider>
-        <Toaster />
-        <Sonner />
-        <BrowserRouter>
-          <Routes>
-            <Route path="/" element={<Layout />}>
-              <Route index element={<Dashboard />} />
-              <Route path="exams" element={<Exams />} />
-              <Route path="analytics" element={<Analytics />} />
-              <Route path="categories" element={<Categories />} />
-              <Route path="profile" element={<Profile />} />
-              <Route path="edit-profile" element={<EditProfile />} />
-              <Route path="settings" element={<Settings />} />
-              
-              {/* Footer pages */}
-              <Route path="about" element={<About />} />
-              <Route path="team" element={<Team />} />
-              <Route path="contact" element={<Contact />} />
-              <Route path="support" element={<Support />} />
-              <Route path="faq" element={<FAQ />} />
-              <Route path="documentation" element={<Documentation />} />
-              <Route path="privacy" element={<Privacy />} />
-              <Route path="terms" element={<Terms />} />
-              <Route path="cookies" element={<Cookies />} />
-              <Route path="mobile" element={<Mobile />} />
-              <Route path="desktop" element={<Desktop />} />
-              <Route path="resources" element={<Resources />} />
-            </Route>
-            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </BrowserRouter>
-      </TooltipProvider>
+      <AuthProviderWrapper>
+        <PerformanceOptimizer>
+          <TooltipProvider>
+            <Toaster />
+            <Sonner />
+            <BrowserRouter>
+              <Routes>
+                <Route path="/" element={<Layout />}>
+                  <Route index element={<Dashboard />} />
+                  <Route path="exams" element={<Exams />} />
+                  <Route path="analytics" element={<Analytics />} />
+                  <Route path="categories" element={<Categories />} />
+                  <Route path="profile" element={<Profile />} />
+                  <Route path="edit-profile" element={<EditProfile />} />
+                  <Route path="settings" element={<Settings />} />
+                  
+                  {/* Footer pages */}
+                  <Route path="about" element={<About />} />
+                  <Route path="team" element={<Team />} />
+                  <Route path="contact" element={<Contact />} />
+                  <Route path="support" element={<Support />} />
+                  <Route path="faq" element={<FAQ />} />
+                  <Route path="documentation" element={<Documentation />} />
+                  <Route path="privacy" element={<Privacy />} />
+                  <Route path="terms" element={<Terms />} />
+                  <Route path="cookies" element={<Cookies />} />
+                  <Route path="mobile" element={<Mobile />} />
+                  <Route path="desktop" element={<Desktop />} />
+                  <Route path="resources" element={<Resources />} />
+                </Route>
+
+                {/* Authentication pages (outside layout) */}
+                <Route path="signin" element={<SignIn />} />
+                <Route path="signup" element={<SignUp />} />
+                
+                {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+                <Route path="*" element={<NotFound />} />
+              </Routes>
+            </BrowserRouter>
+          </TooltipProvider>
+        </PerformanceOptimizer>
+      </AuthProviderWrapper>
     </ThemeProvider>
   </QueryClientProvider>
 );
