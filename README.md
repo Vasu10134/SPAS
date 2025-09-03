@@ -1,4 +1,4 @@
-# SPAS - Student Performance Analysis System
+-# SPAS - Student Performance Analysis System
 
 A comprehensive web application for tracking and analyzing student academic performance, built with modern web technologies.
 
@@ -16,7 +16,7 @@ A comprehensive web application for tracking and analyzing student academic perf
 ## 🛠️ Tech Stack
 
 - **Frontend**: React 18 + TypeScript
-- **Styling**: Tailwind CSS + Shadcn UI
+- **Styling**: Tailwind CSS + Custom UI Components
 - **Routing**: React Router DOM
 - **State Management**: React Query + Context API
 - **Authentication**: Google OAuth + Firebase
@@ -51,7 +51,7 @@ npm run dev
 
 ## 🎨 UI Components
 
-The application uses a custom design system built on top of Shadcn UI with:
+The application uses a custom design system with:
 
 - **Enhanced Cards** - Glass morphism and hover effects
 - **Premium Buttons** - Gradient backgrounds and animations
