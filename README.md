@@ -1,9 +1,7 @@
--# SPAS - Student Performance Analysis System
-
+# SPAS - Student Performance Analysis System  
 A comprehensive web application for tracking and analyzing student academic performance, built with modern web technologies.
 
 ## 🚀 Features
-
 - **Dashboard Analytics** - Comprehensive overview of student performance metrics
 - **Exam Management** - Track and manage student examinations
 - **Performance Analytics** - Detailed analysis and insights
@@ -14,7 +12,6 @@ A comprehensive web application for tracking and analyzing student academic perf
 - **Performance Optimized** - Built with performance in mind
 
 ## 🛠️ Tech Stack
-
 - **Frontend**: React 18 + TypeScript
 - **Styling**: Tailwind CSS + Custom UI Components
 - **Routing**: React Router DOM
@@ -50,9 +47,7 @@ npm run dev
 ```
 
 ## 🎨 UI Components
-
 The application uses a custom design system with:
-
 - **Enhanced Cards** - Glass morphism and hover effects
 - **Premium Buttons** - Gradient backgrounds and animations
 - **Responsive Typography** - Fluid text scaling
@@ -60,7 +55,6 @@ The application uses a custom design system with:
 - **Dark Mode** - Sophisticated color palette
 
 ## 🔧 Performance Features
-
 - **Lazy Loading** - Images and components load on demand
 - **Debouncing** - Optimized search and API calls
 - **Virtual Scrolling** - Efficient handling of large lists
@@ -68,21 +62,18 @@ The application uses a custom design system with:
 - **Network Optimization** - Adaptive loading based on connection
 
 ## 📱 Responsive Design
-
 - Mobile-first approach
 - Touch-friendly interactions
 - Adaptive layouts for all screen sizes
 - Optimized for both desktop and mobile devices
 
 ## 🌙 Theme System
-
 - **Light Theme** - Clean, professional appearance
 - **Dark Theme** - Easy on the eyes with enhanced contrast
 - **System Preference** - Automatically follows OS theme
 - **Customizable** - User can manually toggle themes
 
 ## 🚀 Getting Started
-
 1. Navigate to the application
 2. Sign up or sign in using Google OAuth or email
 3. Explore the dashboard to view performance metrics
@@ -90,7 +81,6 @@ The application uses a custom design system with:
 5. Toggle between light and dark themes using the theme switcher
 
 ## 📊 Key Pages
-
 - **Dashboard** - Main overview and quick actions
 - **Exams** - Examination management and results
 - **Analytics** - Performance insights and trends
@@ -99,7 +89,6 @@ The application uses a custom design system with:
 - **Settings** - Application preferences
 
 ## 🤝 Contributing
-
 1. Fork the repository
 2. Create a feature branch
 3. Make your changes
@@ -107,13 +96,10 @@ The application uses a custom design system with:
 5. Submit a pull request
 
 ## 📄 License
-
 This project is licensed under the MIT License.
 
 ## 🆘 Support
-
 For support and questions, please contact the development team or create an issue in the repository.
-
 ---
 
 **SPAS** - Empowering education through intelligent performance analysis.
